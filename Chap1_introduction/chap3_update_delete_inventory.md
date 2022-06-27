@@ -152,7 +152,7 @@ Utilisez les opérateurs supérieur ou inférieur :
 
 ### 07. Affichez le nom des sociétés dont le statut est A, ou le type est journal et la quantité inférieur strictement à 100.
 
-### 08. Affichez le type des articles qui ont un prix de 0.99 ou 1.99 et qui sont true pour la propriété sale ou ont une quantité strictement inférieur à 45.
+### 08. Affichez le type des articles qui ont un prix de 0.99 ou 1.99, et qui sont true pour la propriété sale ou ont une quantité strictement inférieur à 45.
 
 ### 09. Affichez le nom des sociétés et leur(s) tag(s) si et seulement si ces sociétés ont au moins un tag.
 
