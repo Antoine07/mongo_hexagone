@@ -53,3 +53,21 @@ db.restaurants.find({
         _id : 0
     }
 ).pretty()
+
+// 07 
+
+
+db.restaurants
+  .find({
+    $and: [{ borough: "Bronx" }, { "grades.grade": { $in: ["A", "B"] } }],
+  })
+  .count();
+
+db.restaurants
+  .find({
+    $and: [
+      { borough: "Bronx" },
+      { $or: [{ "grades.grade": "A" }, { "grades.grade": "B" }] },
+    ],
+  })
+  .count();
