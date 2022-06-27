@@ -150,7 +150,7 @@ Utilisez les opérateurs supérieur ou inférieur :
 
 ### 06. Affichez le nom des sociétés dont le statut est A ou le type est journal.
 
-### 07. Affichez le nom des sociétés dont le statut est A ou le type est journal et la quantité inférieur strictement à 100.
+### 07. Affichez le nom des sociétés dont le statut est A, ou le type est journal et la quantité inférieur strictement à 100.
 
 ### 08. Affichez le type des articles qui ont un prix de 0.99 ou 1.99 et qui sont true pour la propriété sale ou ont une quantité strictement inférieur à 45.
 
