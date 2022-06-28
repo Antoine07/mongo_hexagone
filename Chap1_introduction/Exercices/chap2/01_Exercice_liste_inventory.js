@@ -169,33 +169,20 @@ db.inventory.find({ tags : "blank" }).sort({ society : 1 }).forEach( invent => {
     console.log(`Society : ${society} tags :${tags.join(" ")}`);
 });
 
+// ==============
+//10.bis  Affichez le nom des sociétés qui ont au moins un tag blank.
+// ==============
 
-// augmentation
-
-// 1. Augmentation de 50% la quantité de chaque document qui a un status C ou D.
-
-db.inventory.updateMany(
-    { status: { $in: ["C", "D"] } },
-    { $mul: { "qty": 1.5 } }
-);
-
-// 2. Augmentez maintenant de 150% les documents ayant un status A ou B et au moins 3 blanks dans leurs tags.
-
-b.inventory.updateMany(
-    {
-        $and : [
-        {status: { $in: ['A', 'B'] }},
-        {tags: 'blank'}
-        ]
-    },
-    {
-        $mul: { qty: 2.5 }
-    }
+db.inventory.aggregate(
+    { $group: { _id: "$tags", total: { $sum: 1 } } },
 )
 
-// 1
-db.inventory.updateMany(
-    { qty: { $gte: 75 } },
-    { $set: { "scores": [19] } },
-    { "upsert": false }
-);
+db.inventory.aggregate([
+    [
+        {
+            $project: {
+                _id:0
+            }
+        }
+    ]
+])
